@@ -1,3 +1,4 @@
+import { localDateStr } from '../shared/date';
 import { useState, useCallback } from 'react';
 import type { Goal, Milestone } from '../types';
 import {
@@ -37,7 +38,7 @@ export default function GoalDetailScreen({
       ...goal,
       milestones: goal.milestones.map(m =>
         m.id === ms.id
-          ? { ...m, achievedAt: m.achievedAt ? null : new Date().toISOString().split('T')[0] }
+          ? { ...m, achievedAt: m.achievedAt ? null : localDateStr() }
           : m
       ),
       updatedAt: Date.now(),

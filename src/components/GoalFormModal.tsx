@@ -59,7 +59,7 @@ export default function GoalFormModal({ goal, onSave, onClose }: Props) {
       milestones,
       status: goal?.status ?? 'active',
       createdBy: goal?.createdBy ?? 'shared',
-      sharedWith: goal?.sharedWith ?? ['saku', 'takahashi'],
+      sharedWith: goal?.sharedWith ?? ['kenshin', 'rena'],
       createdAt: goal?.createdAt ?? now,
       updatedAt: now,
     };
